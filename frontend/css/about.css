@@ -15,25 +15,20 @@
 
 .about-page .about-cover {
   position: relative;
-
   width: 100%;
   height: 78vh;
   min-height: 620px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   overflow: hidden;
 }
 
 .about-page .about-cover-image {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center;
 }
@@ -41,7 +36,6 @@
 .about-page .about-cover-overlay {
   position: absolute;
   inset: 0;
-
   background:
     linear-gradient(
       180deg,
@@ -54,60 +48,42 @@
 .about-page .about-cover-content {
   position: relative;
   z-index: 2;
-
   width: min(850px, calc(100% - 40px));
-
   margin: 0 auto;
-
   text-align: center;
 }
 
 .about-page .about-cover-label {
   display: block;
-
   margin-bottom: 20px;
-
   color: var(--gold);
-
   font-size: 10px;
   font-weight: 700;
-
   letter-spacing: 2.5px;
   text-transform: uppercase;
 }
 
 .about-page .about-cover-content h1 {
   margin: 0;
-
   color: #ffffff;
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(54px, 7vw, 92px);
-
   font-weight: 500;
-
   line-height: 0.98;
-
   letter-spacing: -3px;
 }
 
 .about-page .about-cover-content h1 em {
   color: var(--warm-ivory);
-
   font-weight: 400;
   font-style: italic;
 }
 
 .about-page .about-cover-content p {
   max-width: 620px;
-
   margin: 25px auto 0;
-
   color: rgba(255, 255, 255, 0.87);
-
   font-size: 14px;
-
   line-height: 1.8;
 }
 
@@ -118,13 +94,11 @@
 
 .about-page .about-story-flow {
   padding: 90px 0 100px;
-
   background: #ffffff;
 }
 
 .about-page .about-flow-container {
   width: min(900px, calc(100% - 56px));
-
   margin: 0 auto;
 }
 
@@ -135,44 +109,32 @@
 
 .about-page .story-progress {
   width: min(620px, 100%);
-
   margin: 0 auto 27px;
 }
 
 .about-page .story-progress-line {
   width: 100%;
   height: 2px;
-
   overflow: hidden;
-
   background: rgba(8, 18, 35, 0.08);
 }
 
 .about-page .story-progress-line span {
   display: block;
-
   width: 33.333%;
-
   height: 100%;
-
   background: var(--gold);
-
   transition: width 450ms ease;
 }
 
 .about-page .story-progress-info {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
-
   margin-top: 9px;
-
   color: #999999;
-
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 1.5px;
 }
 
@@ -183,9 +145,7 @@
 
 .about-page .story-slider {
   position: relative;
-
   width: 100%;
-
   min-height: 520px;
 }
 
@@ -197,33 +157,22 @@
 .about-page .story-card {
   position: absolute;
   inset: 0;
-
   width: 100%;
   min-height: 520px;
-
   padding: 34px 38px;
-
   display: flex;
   flex-direction: column;
-
   overflow: hidden;
-
   border-radius: 24px;
-
   background: var(--warm-ivory);
-
   opacity: 0;
   visibility: hidden;
-
   transform: translateX(35px) scale(0.97);
-
   transition:
     opacity 420ms ease,
     transform 420ms ease,
     visibility 420ms ease;
-
   pointer-events: none;
-
   box-shadow:
     0 20px 55px rgba(8, 18, 35, 0.07);
 }
@@ -231,11 +180,8 @@
 .about-page .story-card.active {
   opacity: 1;
   visibility: visible;
-
   transform: translateX(0) scale(1);
-
   pointer-events: auto;
-
   z-index: 4;
 }
 
@@ -247,21 +193,14 @@
 .about-page .story-card.active::before,
 .about-page .story-card.active::after {
   content: "";
-
   position: absolute;
-
   left: 14px;
   right: 14px;
   bottom: -10px;
-
   height: 100%;
-
   border-radius: 22px;
-
   background: #f2eadf;
-
   z-index: -1;
-
   opacity: 0.72;
 }
 
@@ -269,11 +208,8 @@
   left: 27px;
   right: 27px;
   bottom: -19px;
-
   background: #ebe2d6;
-
   opacity: 0.45;
-
   z-index: -2;
 }
 
@@ -284,32 +220,24 @@
 
 .about-page .story-card-top {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
-
   gap: 20px;
-
   flex-shrink: 0;
 }
 
 .about-page .story-card-number {
   color: #8e8e8e;
-
   font-size: 10px;
   font-weight: 700;
-
   letter-spacing: 1.5px;
 }
 
 .about-page .story-card-label {
   color: #7d7d7d;
-
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 1.8px;
-
   text-transform: uppercase;
 }
 
@@ -320,39 +248,25 @@
 
 .about-page .story-card-content {
   width: min(760px, 100%);
-
   height: calc(100% - 42px);
-
   margin: 0 auto;
-
   padding: 30px 40px 68px;
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
   text-align: center;
 }
 
 .about-page .story-card-content h2 {
   width: 100%;
-
   max-width: 720px;
-
   margin: 0 auto;
-
   color: var(--royal-blue);
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(34px, 4.5vw, 56px);
-
   font-weight: 500;
-
   line-height: 1.06;
-
   letter-spacing: -1.4px;
 }
 
@@ -367,15 +281,10 @@
 
 .about-page .story-card-content > p {
   width: 100%;
-
   max-width: 650px;
-
   margin: 20px auto 0;
-
   color: var(--text-muted);
-
   font-size: 13px;
-
   line-height: 1.8;
 }
 
@@ -403,73 +312,52 @@
 
 .about-page .story-card:nth-child(2) {
   background: var(--warm-ivory);
-
   color: var(--royal-blue);
 }
 
 .about-page .story-card:nth-child(2) .story-card-content {
   width: min(760px, 100%);
-
   padding-top: 25px;
   padding-bottom: 72px;
 }
 
 .about-page .story-card:nth-child(2) .story-card-content h2 {
   max-width: 690px;
-
   font-size: clamp(34px, 4.3vw, 53px);
 }
 
 .about-page .story-heart {
   width: min(620px, 100%);
-
   margin: 28px auto 0;
-
   padding-top: 22px;
-
   border-top: 1px solid rgba(8, 18, 35, 0.10);
-
   text-align: center;
 }
 
 .about-page .story-heart > span {
   display: block;
-
   margin-bottom: 9px;
-
   color: #888888;
-
   font-size: 8px;
   font-weight: 700;
-
   letter-spacing: 1.7px;
-
   text-transform: uppercase;
 }
 
 .about-page .story-heart h3 {
   margin: 0;
-
   color: var(--royal-blue);
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(25px, 3.2vw, 39px);
-
   font-weight: 500;
-
   line-height: 1.05;
 }
 
 .about-page .story-heart p {
   max-width: 540px;
-
   margin: 10px auto 0;
-
   color: var(--text-muted);
-
   font-size: 12px;
-
   line-height: 1.7;
 }
 
@@ -484,7 +372,6 @@
 
 .about-page .story-card:nth-child(3) .story-card-content {
   width: min(770px, 100%);
-
   padding-top: 28px;
   padding-bottom: 72px;
 }
@@ -495,35 +382,24 @@
 
 .about-page .faith-story {
   width: min(670px, 100%);
-
   margin: 28px auto 0;
-
   padding-top: 20px;
-
   border-top: 1px solid rgba(8, 18, 35, 0.10);
-
   text-align: center;
 }
 
 .about-page .faith-star {
   display: block;
-
   margin-bottom: 12px;
-
   color: var(--gold);
-
   font-size: 18px;
 }
 
 .about-page .faith-story p {
   max-width: 650px;
-
   margin: 0 auto;
-
   color: var(--text-muted);
-
   font-size: 12px;
-
   line-height: 1.8;
 }
 
@@ -534,24 +410,16 @@
 
 .about-page .story-next {
   position: absolute;
-
   right: 28px;
   bottom: 27px;
-
   width: 52px;
   height: 52px;
-
   display: grid;
   place-items: center;
-
   border: 1px solid var(--royal-blue);
-
   border-radius: 50%;
-
   background: transparent;
-
   color: var(--royal-blue);
-
   transition:
     background 300ms ease,
     color 300ms ease,
@@ -560,9 +428,7 @@
 
 .about-page .story-next:hover {
   background: var(--royal-blue);
-
   color: var(--warm-ivory);
-
   transform: translateX(4px);
 }
 
@@ -577,32 +443,22 @@
 
 .about-page .story-navigation {
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   gap: 16px;
-
   margin-top: 32px;
 }
 
 .about-page .story-previous {
   width: 38px;
   height: 38px;
-
   display: grid;
   place-items: center;
-
   border: 1px solid rgba(8, 18, 35, 0.15);
-
   border-radius: 50%;
-
   background: transparent;
-
   color: var(--royal-blue);
-
   font-size: 13px;
-
   transition:
     background 300ms ease,
     color 300ms ease;
@@ -610,26 +466,20 @@
 
 .about-page .story-previous:hover {
   background: var(--royal-blue);
-
   color: var(--warm-ivory);
 }
 
 .about-page .story-dots {
   display: flex;
-
   align-items: center;
-
   gap: 7px;
 }
 
 .about-page .story-dot {
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: rgba(8, 18, 35, 0.18);
-
   transition:
     width 300ms ease,
     background 300ms ease;
@@ -637,17 +487,13 @@
 
 .about-page .story-dot.active {
   width: 22px;
-
   border-radius: 999px;
-
   background: var(--gold);
 }
 
 .about-page .story-navigation-text {
   color: #999999;
-
   font-size: 9px;
-
   letter-spacing: 0.8px;
 }
 
@@ -658,19 +504,14 @@
 
 .about-page .about-mission-vision {
   padding: 20px 0 80px;
-
   background: #ffffff;
 }
 
 .about-page .mission-vision-box {
   width: min(960px, calc(100% - 56px));
-
   margin: 0 auto;
-
   padding: 34px;
-
   border-radius: 24px;
-
   background: var(--warm-ivory);
 }
 
@@ -680,30 +521,20 @@
 
 .about-page .section-heading > span {
   display: block;
-
   margin-bottom: 13px;
-
   color: #777777;
-
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 1.7px;
-
   text-transform: uppercase;
 }
 
 .about-page .section-heading h2 {
   margin: 0;
-
   color: var(--royal-blue);
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(34px, 4.5vw, 55px);
-
   font-weight: 500;
-
   line-height: 1;
 }
 
@@ -714,21 +545,15 @@
 
 .about-page .mission-vision-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 1px;
-
   overflow: hidden;
-
   border-radius: 17px;
-
   background: rgba(8, 18, 35, 0.10);
 }
 
 .about-page .mission-vision-card {
   padding: 27px;
-
   background: #ffffff;
 }
 
@@ -738,14 +563,10 @@
 
 .about-page .mv-number {
   display: block;
-
   margin-bottom: 12px;
-
   color: #999999;
-
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 1.5px;
 }
 
@@ -755,16 +576,11 @@
 
 .about-page .mv-label {
   display: block;
-
   margin-bottom: 13px;
-
   color: #777777;
-
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 1.6px;
-
   text-transform: uppercase;
 }
 
@@ -774,15 +590,10 @@
 
 .about-page .mission-vision-card h3 {
   margin: 0 0 17px;
-
   color: var(--royal-blue);
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(25px, 3vw, 36px);
-
   font-weight: 500;
-
   line-height: 1.08;
 }
 
@@ -792,11 +603,8 @@
 
 .about-page .mission-vision-card p {
   margin: 0 0 15px;
-
   color: #656a6f;
-
   font-size: 12.5px;
-
   line-height: 1.85;
 }
 
@@ -819,19 +627,14 @@
 
 .about-page .about-founder {
   padding: 0 0 90px;
-
   background: #ffffff;
 }
 
 .about-page .founder-section-box {
   width: min(960px, calc(100% - 56px));
-
   margin: 0 auto;
-
   padding: 34px;
-
   border-radius: 24px;
-
   background: var(--royal-blue);
 }
 
@@ -849,78 +652,135 @@
 
 .about-page .founder-grid {
   display: grid;
-
   grid-template-columns: 0.85fr 1.15fr;
-
   gap: 18px;
+  align-items: stretch;
 }
 
+
+/* =========================================================
+   FOUNDER PHOTO
+   SAME HEIGHT AS STORY CARD
+========================================================= */
+
 .about-page .founder-photo-wrap {
-  min-height: 370px;
-
+  align-self: stretch;
+  min-height: 0;
+  height: auto;
   overflow: hidden;
-
   border-radius: 17px;
-
   background: #ffffff;
 }
 
 .about-page .founder-photo {
+  display: block;
   width: 100%;
   height: 100%;
-
-  min-height: 370px;
-
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
 }
 
+
+/* =========================================================
+   FOUNDER STORY
+========================================================= */
+
 .about-page .founder-story {
-  min-height: 370px;
-
+  min-height: 0;
   padding: 28px;
-
   display: flex;
   flex-direction: column;
-
   border-radius: 17px;
-
   background: var(--warm-ivory);
 }
 
 .about-page .founder-name-label {
   color: #777777;
-
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 1.7px;
 }
 
 .about-page .founder-story h3 {
   margin: 15px 0 0;
-
   color: var(--royal-blue);
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(28px, 3.4vw, 42px);
-
   font-weight: 500;
-
   line-height: 1.05;
 }
 
+
+/* =========================================================
+   FOUNDER STORY CONTENT
+========================================================= */
+
 .about-page .founder-story-blank {
-  flex: 1;
-
-  min-height: 160px;
-
+  min-height: 0;
   margin-top: 25px;
+  border: none;
+  border-radius: 0;
+}
 
-  border: 1px dashed rgba(8, 18, 35, 0.14);
+.about-page .founder-story-content {
+  color: #5f6670;
+  font-family: "Lora", Georgia, serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+}
 
-  border-radius: 13px;
+.about-page .founder-story-content p {
+  margin: 0 0 13px;
+}
+
+.about-page .founder-story-content strong {
+  color: var(--royal-blue);
+  font-family: "Lora", Georgia, serif;
+  font-weight: 600;
+}
+
+.about-page .founder-highlight {
+  margin-top: 16px !important;
+  padding-left: 16px;
+  border-left: 2px solid var(--gold);
+}
+
+.about-page .founder-highlight strong {
+  line-height: 1.65;
+}
+
+.about-page .founder-signature {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(29, 37, 48, 0.10);
+}
+
+.about-page .founder-signature strong {
+  display: block;
+  color: var(--royal-blue);
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.about-page .founder-signature small {
+  display: block;
+  margin-top: 3px;
+  color: #888888;
+  font-family: "DM Sans", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.about-page .founder-tagline {
+  margin-top: 15px;
+  color: var(--royal-blue);
+  font-family: "Lora", Georgia, serif;
+  font-size: 13px;
 }
 
 
@@ -938,10 +798,15 @@
     grid-template-columns: 1fr;
   }
 
-  .about-page .founder-photo-wrap,
+  .about-page .founder-photo-wrap {
+    min-height: 400px;
+    height: 400px;
+  }
+
   .about-page .founder-photo {
     min-height: 400px;
   }
+
 }
 
 
@@ -960,23 +825,18 @@
 
   .about-page .about-cover-label {
     margin-bottom: 16px;
-
     font-size: 8px;
-
     letter-spacing: 2px;
   }
 
   .about-page .about-cover-content h1 {
     font-size: 43px;
-
     letter-spacing: -1px;
   }
 
   .about-page .about-cover-content p {
     margin-top: 20px;
-
     font-size: 12px;
-
     line-height: 1.7;
   }
 
@@ -997,31 +857,24 @@
 
   .about-page .story-card {
     min-height: 555px;
-
     padding: 23px 18px;
-
     border-radius: 19px;
   }
 
   .about-page .story-card-content {
     width: 100%;
-
     height: calc(100% - 40px);
-
     padding: 25px 5px 68px;
-
     text-align: center;
   }
 
   .about-page .story-card-content h2 {
     font-size: 30px;
-
     letter-spacing: -0.7px;
   }
 
   .about-page .story-card-content > p {
     font-size: 12px;
-
     line-height: 1.75;
   }
 
@@ -1038,7 +891,6 @@
 
   .about-page .story-heart {
     margin-top: 25px;
-
     padding-top: 19px;
   }
 
@@ -1048,7 +900,6 @@
 
   .about-page .story-heart p {
     font-size: 11px;
-
     line-height: 1.65;
   }
 
@@ -1065,13 +916,11 @@
 
   .about-page .faith-story {
     margin-top: 25px;
-
     padding-top: 19px;
   }
 
   .about-page .faith-story p {
     font-size: 11px;
-
     line-height: 1.75;
   }
 
@@ -1081,7 +930,6 @@
   .about-page .story-next {
     right: 17px;
     bottom: 17px;
-
     width: 47px;
     height: 47px;
   }
@@ -1106,9 +954,7 @@
 
   .about-page .mission-vision-box {
     width: calc(100% - 30px);
-
     padding: 22px 18px;
-
     border-radius: 19px;
   }
 
@@ -1137,9 +983,7 @@
 
   .about-page .founder-section-box {
     width: calc(100% - 30px);
-
     padding: 22px;
-
     border-radius: 19px;
   }
 
@@ -1147,19 +991,31 @@
     margin-bottom: 22px;
   }
 
-  .about-page .founder-photo-wrap,
+  .about-page .founder-photo-wrap {
+    min-height: 300px;
+    height: 300px;
+  }
+
   .about-page .founder-photo {
     min-height: 300px;
   }
 
   .about-page .founder-story {
     min-height: 275px;
-
     padding: 22px;
   }
 
   .about-page .founder-story h3 {
     font-size: 30px;
+  }
+
+  .about-page .founder-story-content {
+    font-size: 13px;
+    line-height: 1.72;
+  }
+
+  .about-page .founder-story-content p {
+    margin-bottom: 12px;
   }
 
 
@@ -1172,6 +1028,7 @@
   .about-page .about-ending-inner h2 {
     font-size: 40px;
   }
+
 }
 
 
@@ -1218,6 +1075,7 @@
   .about-page .about-ending-inner h2 {
     font-size: 36px;
   }
+
 }
 
 
@@ -1227,33 +1085,24 @@
 
 .about-page .about-ending {
   position: relative;
-
   padding: 125px 20px;
-
   background: var(--sky-blue);
-
   text-align: center;
-
   overflow: hidden;
 }
 
 .about-page .about-ending::before,
 .about-page .about-ending::after {
   content: "";
-
   position: absolute;
-
   border: 1px solid rgba(8, 18, 35, 0.10);
-
   border-radius: 50%;
-
   pointer-events: none;
 }
 
 .about-page .about-ending::before {
   width: 360px;
   height: 360px;
-
   top: -210px;
   left: -120px;
 }
@@ -1261,7 +1110,6 @@
 .about-page .about-ending::after {
   width: 430px;
   height: 430px;
-
   right: -180px;
   bottom: -260px;
 }
@@ -1269,61 +1117,43 @@
 .about-page .about-ending-inner {
   position: relative;
   z-index: 2;
-
   width: min(850px, 100%);
-
   margin: 0 auto;
 }
 
 .about-page .about-ending-inner > span {
   display: block;
-
   margin-bottom: 24px;
-
   color: rgba(8, 18, 35, 0.55);
-
   font-size: 10px;
   font-weight: 700;
-
   letter-spacing: 2.3px;
-
   text-transform: uppercase;
 }
 
 .about-page .about-ending-inner h2 {
   min-height: 1.15em;
-
   margin: 0;
-
   color: var(--royal-blue);
-
   font-family: "Playfair Display", serif;
-
   font-size: clamp(46px, 6vw, 76px);
-
   font-weight: 500;
-
   line-height: 1.05;
-
   letter-spacing: -2px;
 }
 
 .about-page .about-cursor {
   display: inline-block;
-
   width: 2px;
   height: 0.85em;
-
   margin-left: 7px;
-
   vertical-align: -0.05em;
-
   background: var(--royal-blue);
-
   animation: aboutCursorBlink 0.8s steps(1) infinite;
 }
 
 @keyframes aboutCursorBlink {
+
   0%,
   45% {
     opacity: 1;
@@ -1333,11 +1163,12 @@
   100% {
     opacity: 0;
   }
+
 }
 
 
 /* =========================================================
-   MOBILE
+   ENDING MOBILE
 ========================================================= */
 
 @media (max-width: 700px) {
@@ -1348,157 +1179,14 @@
 
   .about-page .about-ending-inner > span {
     margin-bottom: 19px;
-
     font-size: 8px;
-
     letter-spacing: 2px;
   }
 
   .about-page .about-ending-inner h2 {
     min-height: 2.2em;
-
     font-size: 40px;
-
     line-height: 1.08;
   }
 
-}
-/* =========================================================
-   FOUNDER STORY — SOFT + EDITORIAL TYPOGRAPHY
-========================================================= */
-
-.about-page .founder-story-content {
-  margin-top: 24px;
-
-  color: #5f6670;
-
-  font-family: "Lora", Georgia, serif;
-  font-size: 15px;
-  font-weight: 400;
-
-  line-height: 1.82;
-  letter-spacing: -0.01em;
-}
-
-.about-page .founder-story-content p {
-  margin: 0 0 15px;
-}
-
-.about-page .founder-story-content strong {
-  color: var(--royal-blue);
-
-  font-family: "Lora", Georgia, serif;
-  font-weight: 600;
-
-  letter-spacing: -0.01em;
-}
-
-
-/* =========================================================
-   FOUNDER NAME
-========================================================= */
-
-.about-page .founder-name-label {
-  font-family: "DM Sans", sans-serif;
-
-  font-size: 9px;
-  font-weight: 600;
-
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-}
-
-
-/* =========================================================
-   FOUNDER HEADING
-========================================================= */
-
-.about-page .founder-story h3 {
-  margin-top: 15px;
-
-  color: var(--royal-blue);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(38px, 4vw, 54px);
-  font-weight: 500;
-
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.about-page .founder-story h3 em {
-  font-weight: 400;
-  font-style: italic;
-}
-
-
-/* =========================================================
-   SIGNATURE
-========================================================= */
-
-.about-page .founder-signature {
-  margin-top: 26px;
-  padding-top: 20px;
-
-  border-top:
-    1px solid rgba(29, 37, 48, 0.10);
-}
-
-.about-page .founder-signature span {
-  display: block;
-
-  margin-bottom: 4px;
-
-  color: #777777;
-
-  font-family: "Lora", Georgia, serif;
-  font-size: 15px;
-  font-style: italic;
-}
-
-.about-page .founder-signature strong {
-  display: block;
-
-  color: var(--royal-blue);
-
-  font-family: "Playfair Display", serif;
-  font-size: 30px;
-  font-weight: 500;
-}
-
-.about-page .founder-signature small {
-  display: block;
-
-  margin-top: 3px;
-
-  color: #888888;
-
-  font-family: "DM Sans", sans-serif;
-  font-size: 8px;
-  font-weight: 600;
-
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-
-  .about-page .founder-story-content {
-    font-size: 14px;
-    line-height: 1.78;
-  }
-
-  .about-page .founder-story-content strong {
-    font-weight: 600;
-  }
-
-  .about-page .founder-story h3 {
-    font-size: 34px;
-  }
 }
