@@ -1205,193 +1205,116 @@ function createWhatsAppMessage(
 ========================================================= */
 
 function initGiftVideo() {
+  const video = document.getElementById("giftVideo");
+  const typingMessage = document.getElementById("typingMessage");
+  const typingCursor = document.getElementById("typingCursor");
+  const giftBranding = document.getElementById("giftBranding");
 
-  const video =
-    document.getElementById(
-      "giftVideo"
-    );
-
-
-  const typingMessage =
-    document.getElementById(
-      "typingMessage"
-    );
-
-
-  const typingCursor =
-    document.getElementById(
-      "typingCursor"
-    );
-
-
-  const giftBranding =
-    document.getElementById(
-      "giftBranding"
-    );
-
-
-  if (
-    !video ||
-    !typingMessage
-  ) {
+  if (!video || !typingMessage) {
     return;
   }
 
+  // Prevent this hero from being initialized more than once.
+  if (video.dataset.giftVideoInitialized === "true") {
+    return;
+  }
 
-  const text =
-    "FOR EVERY MOMENT, THERE IS A GIFT FOR IT.";
+  video.dataset.giftVideoInitialized = "true";
 
+  const text = "FOR EVERY MOMENT, THERE IS A GIFT FOR IT.";
 
   let timer = null;
-
+  let startTimeout = null;
   let started = false;
 
-
   function reset() {
-
     if (timer) {
-
-      clearInterval(
-        timer
-      );
-
+      clearInterval(timer);
       timer = null;
     }
 
+    if (startTimeout) {
+      clearTimeout(startTimeout);
+      startTimeout = null;
+    }
 
-    typingMessage.textContent =
-      "";
-
+    typingMessage.textContent = "";
 
     if (typingCursor) {
-      typingCursor.style.display =
-        "inline-block";
+      typingCursor.style.display = "inline-block";
     }
-
 
     if (giftBranding) {
-      giftBranding.classList.remove(
-        "visible"
-      );
+      giftBranding.classList.remove("visible");
     }
-
 
     started = false;
   }
 
-
   function startTyping() {
-
     if (started) {
       return;
     }
 
-
     started = true;
-
 
     let index = 0;
 
+    timer = setInterval(() => {
+      if (index < text.length) {
+        // Render the exact text instead of relying on +=.
+        // This keeps the output safe even if something
+        // accidentally triggers the function again.
+        index += 1;
+        typingMessage.textContent = text.slice(0, index);
+        return;
+      }
 
-    timer =
-      setInterval(
-        () => {
+      clearInterval(timer);
+      timer = null;
 
-          typingMessage.textContent +=
-            text.charAt(index);
+      setTimeout(() => {
+        if (typingCursor) {
+          typingCursor.style.display = "none";
+        }
 
-
-          index++;
-
-
-          if (
-            index >=
-            text.length
-          ) {
-
-            clearInterval(
-              timer
-            );
-
-
-            timer = null;
-
-
-            setTimeout(
-              () => {
-
-                if (typingCursor) {
-                  typingCursor.style.display =
-                    "none";
-                }
-
-
-                if (giftBranding) {
-                  giftBranding.classList.add(
-                    "visible"
-                  );
-                }
-
-              },
-              500
-            );
-          }
-
-        },
-        55
-      );
+        if (giftBranding) {
+          giftBranding.classList.add("visible");
+        }
+      }, 500);
+    }, 55);
   }
 
-
   video.muted = true;
-
   video.playsInline = true;
 
-
-  video.addEventListener(
-    "play",
-    () => {
-
-      if (!started) {
-
-        reset();
-
-
-        setTimeout(
-          startTyping,
-          1200
-        );
-      }
+  video.addEventListener("play", () => {
+    if (started || startTimeout) {
+      return;
     }
-  );
 
+    reset();
 
-  video.addEventListener(
-    "ended",
-    () => {
+    startTimeout = setTimeout(() => {
+      startTimeout = null;
+      startTyping();
+    }, 1200);
+  });
 
-      reset();
+  video.addEventListener("ended", () => {
+    reset();
 
-
-      try {
-        video.currentTime = 0;
-      } catch {
-        // Ignore unsupported seek.
-      }
-
-
-      video.play().catch(
-        () => {}
-      );
+    try {
+      video.currentTime = 0;
+    } catch {
+      // Ignore unsupported seek.
     }
-  );
 
+    video.play().catch(() => {});
+  });
 
-  video.play().catch(
-    () => {}
-  );
+  video.play().catch(() => {});
 }
-
 
 /* =========================================================
    ABOUT PAGE — STORY SLIDER
