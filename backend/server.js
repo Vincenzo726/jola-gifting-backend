@@ -9,6 +9,7 @@ dotenv.config({
 
 const connectDB = require("./config/db");
 const consultationRoutes = require("./routes/consultationRoutes");
+const contactRoutes = require("./routes/contactRoutes");
 
 const app = express();
 
@@ -27,13 +28,11 @@ app.use(
 
 app.use(express.json());
 
-// Serve frontend
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-// Consultation API — POST only
 app.use("/api/consultations", consultationRoutes);
+app.use("/api/contact", contactRoutes);
 
-// Health check
 app.get("/api/health", (req, res) => {
   res.json({
     success: true,
