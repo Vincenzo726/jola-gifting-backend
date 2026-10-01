@@ -1363,3 +1363,142 @@
   }
 
 }
+/* =========================================================
+   FOUNDER STORY — SOFT + EDITORIAL TYPOGRAPHY
+========================================================= */
+
+.about-page .founder-story-content {
+  margin-top: 24px;
+
+  color: #5f6670;
+
+  font-family: "Lora", Georgia, serif;
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.82;
+  letter-spacing: -0.01em;
+}
+
+.about-page .founder-story-content p {
+  margin: 0 0 15px;
+}
+
+.about-page .founder-story-content strong {
+  color: var(--royal-blue);
+
+  font-family: "Lora", Georgia, serif;
+  font-weight: 600;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================================================
+   FOUNDER NAME
+========================================================= */
+
+.about-page .founder-name-label {
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FOUNDER HEADING
+========================================================= */
+
+.about-page .founder-story h3 {
+  margin-top: 15px;
+
+  color: var(--royal-blue);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 4vw, 54px);
+  font-weight: 500;
+
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.about-page .founder-story h3 em {
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.about-page .founder-signature {
+  margin-top: 26px;
+  padding-top: 20px;
+
+  border-top:
+    1px solid rgba(29, 37, 48, 0.10);
+}
+
+.about-page .founder-signature span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #777777;
+
+  font-family: "Lora", Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.about-page .founder-signature strong {
+  display: block;
+
+  color: var(--royal-blue);
+
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.about-page .founder-signature small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #888888;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .about-page .founder-story-content {
+    font-size: 14px;
+    line-height: 1.78;
+  }
+
+  .about-page .founder-story-content strong {
+    font-weight: 600;
+  }
+
+  .about-page .founder-story h3 {
+    font-size: 34px;
+  }
+}

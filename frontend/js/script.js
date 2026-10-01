@@ -1081,6 +1081,7 @@ function initConsultation() {
   showStep(1);
 }
 
+
 /* =========================================================
    CONSULTATION SUCCESS
 ========================================================= */
@@ -2146,3 +2147,149 @@ document.addEventListener(
     initFooterWhatsApp();
   }
 );
+
+
+/* =========================================================
+   ABOUT PAGE — CLOSING TYPEWRITER
+========================================================= */
+
+function initAboutEnding() {
+  const endingText = document.getElementById(
+    "jolaEndingTypewriter"
+  );
+
+  const endingSection = document.querySelector(
+    ".about-page .about-ending"
+  );
+
+  if (!endingText || !endingSection) {
+    return;
+  }
+
+  /*
+    Prevent the animation from being initialized twice.
+    This fixes duplicated text such as:
+    WWhhaatteevveerr...
+  */
+  if (endingSection.dataset.typewriterStarted === "true") {
+    return;
+  }
+
+  endingSection.dataset.typewriterStarted = "true";
+
+  const cursor = endingSection.querySelector(
+    ".about-cursor"
+  );
+
+  const message =
+    "Whatever the season, make them feel seen.";
+
+  endingText.textContent = "";
+
+  if (cursor) {
+    cursor.style.display = "inline-block";
+  }
+
+  let index = 0;
+
+  function typeMessage() {
+    if (index >= message.length) {
+      if (cursor) {
+        setTimeout(() => {
+          cursor.style.display = "none";
+        }, 1200);
+      }
+
+      return;
+    }
+
+    endingText.textContent += message.charAt(index);
+
+    index += 1;
+
+    setTimeout(typeMessage, 75);
+  }
+
+  typeMessage();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initConsultation();
+  initFooterWhatsApp();
+  initGiftVideo();
+  initAboutStories();
+  initAboutEnding();
+  initContactForm();
+  initFounderStory();
+});
+
+
+/* =========================================================
+   ABOUT PAGE — FOUNDER STORY
+========================================================= */
+
+function initFounderStory() {
+  const story = document.getElementById("founderStory");
+  const photo = document.querySelector(".founder-photo");
+  const button = document.getElementById("founderContinue");
+  const more = document.getElementById("founderStoryMore");
+
+  if (!story || !photo || !button || !more) {
+    return;
+  }
+
+  function matchStoryHeight() {
+    if (window.innerWidth <= 900 || story.classList.contains("is-expanded")) {
+      story.style.height = "";
+      return;
+    }
+
+    const photoHeight = photo.getBoundingClientRect().height;
+
+    if (photoHeight > 0) {
+      story.style.height = `${photoHeight}px`;
+    }
+  }
+
+  function setExpandedState(expanded) {
+    story.classList.toggle("is-expanded", expanded);
+
+    button.setAttribute(
+      "aria-expanded",
+      expanded ? "true" : "false"
+    );
+
+    more.setAttribute(
+      "aria-hidden",
+      expanded ? "false" : "true"
+    );
+
+    const text = button.querySelector(".founder-continue-text");
+
+    if (text) {
+      text.textContent = expanded
+        ? "Close the story"
+        : "Continue the story";
+    }
+
+    if (expanded) {
+      story.style.height = "";
+    } else {
+      matchStoryHeight();
+    }
+  }
+
+  button.addEventListener("click", () => {
+    const expanded = story.classList.contains("is-expanded");
+
+    setExpandedState(!expanded);
+  });
+
+  if (photo.complete) {
+    matchStoryHeight();
+  } else {
+    photo.addEventListener("load", matchStoryHeight);
+  }
+
+  window.addEventListener("resize", matchStoryHeight);
+}
