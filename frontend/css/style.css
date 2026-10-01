@@ -2125,3 +2125,448 @@ h3 {
     font-size: 21px;
   }
 }
+
+/* =========================
+   FLOATING WHITE HEADER
+========================= */
+
+.site-header {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1120px, calc(100% - 32px));
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid rgba(8, 18, 35, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(8, 18, 35, 0.12);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.brand-tagline {
+  margin-top: 4px;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 600;
+  transition: opacity 0.s ease;
+}
+
+.main-nav a:hover {
+  opacity: 0.6;
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border-radius: 12px;
+  background: var(--royal-blue);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+  .main-nav {
+    display: none;
+  }
+
+  .header-inner {
+    padding: 10px 12px;
+  }
+
+  .header-cta {
+    padding: 9px 12px;
+    font-size: 0.75rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+}
+
+/* =========================
+   STEP 3 GIFT CHOICES
+========================= */
+
+.gift-choice-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.gift-choice-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.gift-choice-option:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(8, 18, 35, 0.08);
+}
+
+.gift-choice-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gift-choice-check {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  border: 1.5px solid rgba(8, 18, 35, 0.25);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.gift-choice-option:has(input:checked) {
+  border-color: var(--royal-blue);
+  box-shadow: 0 10px 30px rgba(8, 18, 35, 0.1);
+}
+
+.gift-choice-option:has(input:checked) .gift-choice-check {
+  background: var(--royal-blue);
+  border-color: var(--royal-blue);
+  color: #ffffff;
+}
+
+.gift-choice-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gift-choice-title {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.gift-choice-description {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.gift-detail-box {
+  display: none;
+  margin-top: 18px;
+}
+
+.gift-detail-box.is-visible {
+  display: block;
+}
+
+/* =========================================================
+   JOLA GIFTING
+   FORM + HEADER FIXES
+========================================================= */
+
+
+/* =========================
+   HEADER
+   Normal page element.
+   NOT fixed.
+   NOT sticky.
+========================= */
+
+.site-header {
+  position: absolute !important;
+  top: 18px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  transform: none !important;
+  z-index: 1000;
+}
+
+.site-header .header-inner {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid rgba(8, 18, 35, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(8, 18, 35, 0.10);
+}
+
+
+/* =========================
+   FORM STEPS
+   ONLY ONE STEP AT A TIME
+========================= */
+
+.form-step {
+  display: none !important;
+}
+
+.form-step.active {
+  display: block !important;
+}
+
+
+/* =========================
+   GIFT CHOICE
+   YES / NOT YET
+========================= */
+
+.gift-choice-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.gift-choice-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid rgba(8, 18, 35, 0.12);
+  border-radius: 14px;
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.gift-choice-option:hover {
+  transform: translateY(-1px);
+}
+
+.gift-choice-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gift-choice-check {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(8, 18, 35, 0.25);
+  border-radius: 6px;
+  color: transparent;
+  font-size: 12px;
+  font-weight: 800;
+  transition: 200ms ease;
+}
+
+.gift-choice-option input:checked
+  + .gift-choice-check {
+  background: #081223;
+  border-color: #081223;
+  color: #ffffff;
+}
+
+.gift-choice-option input:checked
+  ~ .gift-choice-content {
+  color: #081223;
+}
+
+
+/* =========================
+   GIFT DETAILS
+========================= */
+
+.gift-detail-box {
+  display: none;
+  margin-top: 20px;
+}
+
+.gift-detail-box.is-visible {
+  display: block;
+}
+
+
+/* =========================
+   GIFT OPTIONS
+   MULTIPLE CHECKBOXES
+========================= */
+
+.gift-options-heading {
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+
+.gift-options-heading label {
+  display: block;
+  font-weight: 700;
+}
+
+.gift-options-heading p {
+  margin: 6px 0 0;
+  color: #6f747b;
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.gift-options-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.gift-option-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 13px 14px;
+  border: 1px solid rgba(8, 18, 35, 0.12);
+  border-radius: 12px;
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.gift-option-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(8, 18, 35, 0.07);
+}
+
+.gift-option-item input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gift-option-check {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(8, 18, 35, 0.25);
+  border-radius: 5px;
+  color: transparent;
+  font-size: 11px;
+  font-weight: 800;
+  transition: 200ms ease;
+}
+
+.gift-option-item input:checked
+  + .gift-option-check {
+  background: #081223;
+  border-color: #081223;
+  color: #ffffff;
+}
+
+.gift-option-item input:checked
+  ~ span:last-child {
+  font-weight: 700;
+  color: #081223;
+}
+
+
+/* =========================
+   HELP TEXT
+========================= */
+
+.field-helper {
+  margin: 7px 0 12px;
+  color: #6f747b;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    top: 10px !important;
+  }
+
+  .site-header .header-inner {
+    width: calc(100% - 20px);
+  }
+
+  .gift-options-list {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+
+
+
+
+

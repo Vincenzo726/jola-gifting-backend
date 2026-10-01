@@ -10,12 +10,21 @@
     name="description"
     content="Jola Gifting creates thoughtful, personal gifting experiences for life's special moments."
   />
-<meta property="og:title" content="Jola Gifting" />
-<meta property="og:description" content="Thoughtfully. Personally. Beautifully." />
-<meta property="og:image" content="https://jolagifting.com/assets/logo.jpg" />
-<meta property="og:url" content="https://jolagifting.com" />
-<meta property="og:type" content="website" />
 
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Jola Gifting" />
+  <meta
+    property="og:description"
+    content="Thoughtfully. Personally. Beautifully."
+  />
+  <meta
+    property="og:image"
+    content="https://jolagifting.com/assets/logo.jpg"
+  />
+  <meta property="og:url" content="https://jolagifting.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -23,51 +32,98 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
   />
-<link rel="icon" type="image/jpeg" href="./assets/logo.jpg">
-  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- FAVICON -->
+  <link
+    rel="icon"
+    type="image/jpeg"
+    href="./assets/logo.jpg"
+  />
+
+ <link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="site-header">
-    <div class="container header-inner">
+  <!-- =========================
+       HEADER
+  ========================== -->
+<header class="site-header">
 
-      <a href="#" class="brand">
+  <div class="container">
+
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+
         <img
           src="./assets/logo.jpg"
-          alt="Jola Gifting"
+          alt="Jola Gifting logo"
           class="brand-logo"
-        />
+        >
 
         <div class="brand-text">
-          <span class="brand-name">JOLA GIFTING</span>
-          <span class="brand-tagline">
-            Thoughtfully. Personally. Beautifully.
+
+          <span class="brand-name">
+            JOLA
           </span>
+
+          <span class="brand-tagline">
+            MAKE THEM FEEL SEEN.
+          </span>
+
         </div>
+
       </a>
 
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#consultation">Consultation</a>
-        <a href="#about">About</a>
+
+      <nav
+        class="site-nav"
+        aria-label="Main navigation"
+      >
+
+        <a
+          href="index.html"
+          class="active"
+        >
+          Home
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+        <a
+          href="#consultation"
+          class="nav-cta"
+        >
+          Create Your Gift
+        </a>
+
       </nav>
 
-      <a href="#consultation" class="header-cta">
-        Start a Consultation
-      </a>
-
     </div>
-  </header>
+
+  </div>
+
+</header>
 
 
   <main>
 
-    <!-- ================= HERO ================= -->
+    <!-- =========================
+         HERO
+    ========================== -->
     <section class="hero">
 
       <div class="hero-glow hero-glow-one"></div>
       <div class="hero-glow hero-glow-two"></div>
+
 
       <div class="container hero-inner">
 
@@ -75,14 +131,19 @@
         <div class="hero-copy">
 
           <div class="eyebrow">
+
             <span class="eyebrow-line"></span>
+
             Thoughtful gifting, made personal
+
           </div>
+
 
           <h1>
             Let’s Create
             <span>Something Special.</span>
           </h1>
+
 
           <p>
             Every gift tells a story. Tell us who you're celebrating,
@@ -90,16 +151,24 @@
             they'll truly remember.
           </p>
 
+
           <div class="hero-actions">
 
-            <a href="#consultation" class="primary-button">
+            <a
+              href="#consultation"
+              class="primary-button"
+            >
               Create Your Gift
               <span>→</span>
             </a>
 
-            <a href="#about" class="text-button">
+
+            <a
+              href="about.html"
+              class="text-button"
+            >
               Discover Jola Gifting
-              <span>↓</span>
+              <span>→</span>
             </a>
 
           </div>
@@ -112,7 +181,6 @@
 
           <div class="gift-experience-card">
 
-            <!-- VIDEO -->
             <div class="gift-video-wrap">
 
               <video
@@ -124,18 +192,19 @@
                 preload="auto"
                 aria-label="Jola Gifting brand video"
               >
+
                 <source
                   src="./assets/gifting-video.mp4"
                   type="video/mp4"
                 />
 
                 Your browser does not support the video tag.
+
               </video>
 
             </div>
 
 
-            <!-- TYPING MESSAGE -->
             <div class="gift-message">
 
               <p
@@ -153,7 +222,6 @@
             </div>
 
 
-            <!-- BRANDING -->
             <div
               id="giftBranding"
               class="gift-branding"
@@ -182,10 +250,12 @@
           </div>
 
 
-          <!-- FLOATING NOTE -->
           <div class="floating-note">
+
             <span>✦</span>
+
             Made personal
+
           </div>
 
         </div>
@@ -193,25 +263,41 @@
       </div>
 
 
-      <!-- HERO SCROLL -->
       <div class="hero-scroll">
-        <span>Scroll to begin</span>
+
+        <span>
+          Scroll to begin
+        </span>
+
         <div class="scroll-line"></div>
+
       </div>
 
     </section>
 
 
-    <!-- ================= ABOUT ================= -->
-    <section class="about-section" id="about">
+    <!-- =========================
+         ABOUT
+    ========================== -->
+    <section
+      class="about-section"
+      id="about"
+    >
 
       <div class="container about-grid">
 
         <div class="section-label">
-          <span>01</span>
+
+          <span>
+            01
+          </span>
+
           <span class="label-line"></span>
+
           The Jola experience
+
         </div>
+
 
         <div class="about-content">
 
@@ -219,6 +305,7 @@
             Gifting should feel
             <em>personal.</em>
           </h2>
+
 
           <p>
             At Jola Gifting, we believe the best gifts aren't simply
@@ -228,45 +315,105 @@
             moment matter.
           </p>
 
+
           <div class="about-features">
 
             <div class="feature">
-              <span>01</span>
+
+              <span>
+                01
+              </span>
 
               <div>
-                <h3>Tell us the moment</h3>
+
+                <h3>
+                  Tell us their story
+                </h3>
+
                 <p>
-                  Share who you're celebrating and what makes the
-                  occasion special.
+                  Share a little about who you're gifting and what they're experiencing.
                 </p>
+
               </div>
+
             </div>
 
 
             <div class="feature">
-              <span>02</span>
+
+              <span>
+                02
+              </span>
 
               <div>
-                <h3>We'll help you imagine it</h3>
+
+                <h3>
+                  We curate with intention
+                </h3>
+
                 <p>
-                  Have an idea already or need inspiration?
-                  We've got you.
+                  We thoughtfully select items, words and details appropriate for their moment.
                 </p>
+
               </div>
+
             </div>
 
 
             <div class="feature">
-              <span>03</span>
+
+              <span>
+                03
+              </span>
 
               <div>
-                <h3>Let's make it special</h3>
+
+                <h3>
+                  We package with care
+                </h3>
+
                 <p>
-                  We'll connect with you to bring your gifting
-                  vision to life.
+                  Every detail is intentionally put together.
                 </p>
+
               </div>
+
             </div>
+
+          </div>
+
+          <div class="feature">
+
+              <span>
+                04
+              </span>
+
+              <div>
+
+                <h3>
+                  They receive their JOLA moment
+                </h3>
+
+                <p>
+                 A beautiful reminder that they're seen, loved and remembered.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="about-preview-action">
+
+            <a
+              href="about.html"
+              class="text-button"
+            >
+              Learn More About Jola
+              <span>→</span>
+            </a>
 
           </div>
 
@@ -277,7 +424,9 @@
     </section>
 
 
-    <!-- ================= CONSULTATION ================= -->
+    <!-- =========================
+         CONSULTATION
+    ========================== -->
     <section
       class="consultation-section"
       id="consultation"
@@ -288,15 +437,23 @@
         <div class="consultation-heading">
 
           <div class="section-label light">
-            <span>02</span>
+
+            <span>
+              02
+            </span>
+
             <span class="label-line"></span>
+
             Start your consultation
+
           </div>
+
 
           <h2>
             Let's make your
             <span>gift unforgettable.</span>
           </h2>
+
 
           <p>
             A few thoughtful questions is all we need to get started.
@@ -305,31 +462,45 @@
         </div>
 
 
-        <!-- FORM CARD -->
         <div class="consultation-card">
 
           <!-- PROGRESS -->
           <div class="form-progress">
 
             <div class="progress-top">
-              <span id="stepLabel">Step 1 of 4</span>
-              <span id="stepTitle">About You</span>
+
+              <span id="stepLabel">
+                Step 1 of 4
+              </span>
+
+              <span id="stepTitle">
+                About You
+              </span>
+
             </div>
 
+
             <div class="progress-track">
+
               <div
                 class="progress-bar"
                 id="progressBar"
               ></div>
+
             </div>
 
           </div>
 
 
           <!-- FORM -->
-          <form id="consultationForm" novalidate>
+          <form
+            id="consultationForm"
+            novalidate
+          >
 
-            <!-- STEP 1 -->
+            <!-- =========================
+                 STEP 1
+            ========================== -->
             <div
               class="form-step active"
               data-step="1"
@@ -337,13 +508,20 @@
 
               <div class="step-intro">
 
-                <span class="step-number">01</span>
+                <span class="step-number">
+                  01
+                </span>
 
                 <div>
-                  <h3>First, tell us about you.</h3>
+
+                  <h3>
+                    First, tell us about you.
+                  </h3>
+
                   <p>
                     We'll use these details to get in touch with you.
                   </p>
+
                 </div>
 
               </div>
@@ -428,7 +606,9 @@
             </div>
 
 
-            <!-- STEP 2 -->
+            <!-- =========================
+                 STEP 2
+            ========================== -->
             <div
               class="form-step"
               data-step="2"
@@ -436,13 +616,21 @@
 
               <div class="step-intro">
 
-                <span class="step-number">02</span>
+                <span class="step-number">
+                  02
+                </span>
+
 
                 <div>
-                  <h3>Tell us about the moment.</h3>
+
+                  <h3>
+                    Tell us about the moment.
+                  </h3>
+
                   <p>
                     Who are you creating this special moment for?
                   </p>
+
                 </div>
 
               </div>
@@ -480,6 +668,7 @@
                     name="occasion"
                     required
                   >
+
                     <option value="">
                       Select an occasion
                     </option>
@@ -534,6 +723,7 @@
                   ← Back
                 </button>
 
+
                 <button
                   type="button"
                   class="next-button"
@@ -547,7 +737,9 @@
             </div>
 
 
-            <!-- STEP 3 -->
+            <!-- =========================
+                 STEP 3
+            ========================== -->
             <div
               class="form-step"
               data-step="3"
@@ -555,16 +747,19 @@
 
               <div class="step-intro">
 
-                <span class="step-number">03</span>
+                <span class="step-number">
+                  03
+                </span>
+
 
                 <div>
+
                   <h3>
                     Do you already have a gift in mind?
                   </h3>
 
                   <p>
-                    There's no wrong answer. We'll meet you
-                    where you are.
+                    There's no wrong answer. We'll meet you where you are.
                   </p>
 
                 </div>
@@ -572,96 +767,396 @@
               </div>
 
 
-              <div class="choice-grid">
+              <!-- MAIN CHOICE -->
+              <div class="gift-choice-list">
 
-                <button
-                  type="button"
-                  class="choice-card"
-                  data-choice="yes"
-                >
+                <!-- YES -->
+                <label class="gift-choice-option">
 
-                  <span class="choice-icon">✦</span>
+                  <input
+                    type="radio"
+                    name="giftChoice"
+                    value="yes"
+                    id="giftChoiceYes"
+                  />
 
-                  <span class="choice-content">
-                    <strong>
+                  <span
+                    class="gift-choice-check"
+                    aria-hidden="true"
+                  >
+                    ✓
+                  </span>
+
+
+                  <span class="gift-choice-content">
+
+                    <span class="gift-choice-title">
                       Yes, I have an idea
-                    </strong>
+                    </span>
 
-                    <small>
+                    <span class="gift-choice-description">
                       I already know what I'd like.
-                    </small>
+                    </span>
+
                   </span>
 
-                  <span class="choice-arrow">→</span>
-
-                </button>
+                </label>
 
 
-                <button
-                  type="button"
-                  class="choice-card"
-                  data-choice="no"
+                <!-- NOT YET -->
+                <label class="gift-choice-option">
+
+                  <input
+                    type="radio"
+                    name="giftChoice"
+                    value="no"
+                    id="giftChoiceNo"
+                  />
+
+                  <span
+                    class="gift-choice-check"
+                    aria-hidden="true"
+                  >
+                    ✓
+                  </span>
+
+
+                  <span class="gift-choice-content">
+
+                    <span class="gift-choice-title">
+                      Not yet
+                    </span>
+
+                    <span class="gift-choice-description">
+                      I'd love some help choosing.
+                    </span>
+
+                  </span>
+
+                </label>
+
+              </div>
+
+
+              <!-- =========================
+                   YES FLOW
+              ========================== -->
+              <div
+                id="giftOptionsBox"
+                class="gift-detail-box"
+              >
+
+                <div class="gift-options-heading">
+
+                  <label>
+                    What kind of gift are you thinking about?
+                  </label>
+
+                  <p>
+                    You can select more than one.
+                  </p>
+
+                </div>
+
+
+                <div class="gift-options-list">
+
+                  <!-- PERFUME -->
+                  <label class="gift-option-item">
+
+                    <input
+                      type="checkbox"
+                      name="giftType"
+                      value="Perfume"
+                    />
+
+                    <span
+                      class="gift-option-check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+
+                    <span>
+                      Perfume
+                    </span>
+
+                  </label>
+
+
+                  <!-- FLOWERS -->
+                  <label class="gift-option-item">
+
+                    <input
+                      type="checkbox"
+                      name="giftType"
+                      value="Flowers"
+                    />
+
+                    <span
+                      class="gift-option-check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+
+                    <span>
+                      Flowers
+                    </span>
+
+                  </label>
+
+
+                  <!-- GIFT BOX -->
+                  <label class="gift-option-item">
+
+                    <input
+                      type="checkbox"
+                      name="giftType"
+                      value="Gift Box / Hamper"
+                    />
+
+                    <span
+                      class="gift-option-check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+
+                    <span>
+                      Gift Box / Hamper
+                    </span>
+
+                  </label>
+
+
+                  <!-- JEWELRY -->
+                  <label class="gift-option-item">
+
+                    <input
+                      type="checkbox"
+                      name="giftType"
+                      value="Jewelry"
+                    />
+
+                    <span
+                      class="gift-option-check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+
+                    <span>
+                      Jewelry
+                    </span>
+
+                  </label>
+
+
+                  <!-- WATCH -->
+                  <label class="gift-option-item">
+
+                    <input
+                      type="checkbox"
+                      name="giftType"
+                      value="Watch"
+                    />
+
+                    <span
+                      class="gift-option-check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+
+                    <span>
+                      Watch
+                    </span>
+
+                  </label>
+
+
+                  <!-- CAKE -->
+                  <label class="gift-option-item">
+
+                    <input
+                      type="checkbox"
+                      name="giftType"
+                      value="Cake & Treats"
+                    />
+
+                    <span
+                      class="gift-option-check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+
+                    <span>
+                      Cake & Treats
+                    </span>
+
+                  </label>
+
+
+                  <!-- PERSONALIZED -->
+                  <label class="gift-option-item">
+
+                    <input
+                      type="checkbox"
+                      name="giftType"
+                      value="Personalized Gift"
+                    />
+
+                    <span
+                      class="gift-option-check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+
+                    <span>
+                      Personalized Gift
+                    </span>
+
+                  </label>
+
+
+                  <!-- BEAUTY -->
+                  <label class="gift-option-item">
+
+                    <input
+                      type="checkbox"
+                      name="giftType"
+                      value="Skincare / Beauty"
+                    />
+
+                    <span
+                      class="gift-option-check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+
+                    <span>
+                      Skincare / Beauty
+                    </span>
+
+                  </label>
+
+
+                  <!-- FASHION -->
+                  <label class="gift-option-item">
+
+                    <input
+                      type="checkbox"
+                      name="giftType"
+                      value="Fashion / Accessories"
+                    />
+
+                    <span
+                      class="gift-option-check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+
+                    <span>
+                      Fashion / Accessories
+                    </span>
+
+                  </label>
+
+
+                  <!-- OTHER -->
+                  <label class="gift-option-item">
+
+                    <input
+                      type="checkbox"
+                      name="giftType"
+                      value="Other"
+                      id="giftTypeOther"
+                    />
+
+                    <span
+                      class="gift-option-check"
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
+
+                    <span>
+                      Other
+                    </span>
+
+                  </label>
+
+                </div>
+
+
+                <!-- OTHER GIFT -->
+                <div
+                  id="otherGiftBox"
+                  class="gift-detail-box"
                 >
 
-                  <span class="choice-icon">♡</span>
+                  <div class="field full-width">
 
-                  <span class="choice-content">
-                    <strong>
-                      Not yet
-                    </strong>
+                    <label for="otherGiftIdea">
+                      Tell us what else you have in mind
+                    </label>
 
-                    <small>
-                      I'd love some help choosing.
-                    </small>
-                  </span>
+                    <textarea
+                      id="otherGiftIdea"
+                      name="otherGiftIdea"
+                      rows="4"
+                      placeholder="Write the other gift you have in mind..."
+                    ></textarea>
 
-                  <span class="choice-arrow">→</span>
+                    <small class="field-error"></small>
 
-                </button>
+                  </div>
+
+                </div>
 
               </div>
 
 
-              <!-- GIFT IDEA -->
+              <!-- =========================
+                   NOT YET FLOW
+              ========================== -->
               <div
-                class="conditional-field"
-                id="giftIdeaField"
+                id="helpDetailsBox"
+                class="gift-detail-box"
               >
 
-                <label for="giftIdea">
-                  What gift do you have in mind?
-                </label>
+                <div class="field full-width">
 
-                <textarea
-                  id="giftIdea"
-                  name="giftIdea"
-                  rows="4"
-                  placeholder="Tell us a little about what you're imagining..."
-                ></textarea>
+                  <label for="helpDetails">
+                    Tell us about the person
+                  </label>
 
-              </div>
+                  <p class="field-helper">
+                    What do you want us to know about the person you're
+                    gifting? Their personality, interests, likes, dislikes,
+                    style, or anything else that could help us choose.
+                  </p>
 
+                  <textarea
+                    id="helpDetails"
+                    name="helpDetails"
+                    rows="6"
+                    placeholder="Tell us about the person you're gifting..."
+                  ></textarea>
 
-              <!-- HELP -->
-              <div
-                class="conditional-field"
-                id="helpField"
-              >
+                  <small class="field-error"></small>
 
-                <label for="helpDetails">
-                  Tell us a little about them
-                </label>
-
-                <textarea
-                  id="helpDetails"
-                  name="helpDetails"
-                  rows="4"
-                  placeholder="Their personality, interests, favourite things, or anything that might help us..."
-                ></textarea>
+                </div>
 
               </div>
 
 
+              <!-- STEP 3 ACTIONS -->
               <div class="form-actions split-actions">
 
                 <button
@@ -671,10 +1166,10 @@
                   ← Back
                 </button>
 
+
                 <button
                   type="button"
                   class="next-button"
-                  id="stepThreeNext"
                 >
                   Continue
                   <span>→</span>
@@ -685,7 +1180,9 @@
             </div>
 
 
-            <!-- STEP 4 -->
+            <!-- =========================
+                 STEP 4
+            ========================== -->
             <div
               class="form-step"
               data-step="4"
@@ -693,14 +1190,21 @@
 
               <div class="step-intro">
 
-                <span class="step-number">04</span>
+                <span class="step-number">
+                  04
+                </span>
+
 
                 <div>
-                  <h3>One last thing.</h3>
+
+                  <h3>
+                    One last thing.
+                  </h3>
+
                   <p>
-                    These details help us understand what
-                    you're looking for.
+                    These details help us understand what you're looking for.
                   </p>
+
                 </div>
 
               </div>
@@ -711,11 +1215,15 @@
                 <div class="field full-width">
 
                   <label for="budget">
+
                     Estimated Budget
+
                     <span class="optional">
                       Optional
                     </span>
+
                   </label>
+
 
                   <input
                     type="text"
@@ -730,11 +1238,15 @@
                 <div class="field full-width">
 
                   <label for="notes">
+
                     Anything else we should know?
+
                     <span class="optional">
                       Optional
                     </span>
+
                   </label>
+
 
                   <textarea
                     id="notes"
@@ -756,6 +1268,7 @@
                 >
                   ← Back
                 </button>
+
 
                 <button
                   type="submit"
@@ -779,7 +1292,9 @@
           </form>
 
 
-          <!-- SUCCESS -->
+          <!-- =========================
+               SUCCESS
+          ========================== -->
           <div
             class="success-state"
             id="successState"
@@ -789,14 +1304,17 @@
               <span>✦</span>
             </div>
 
+
             <p class="success-eyebrow">
               Request received
             </p>
+
 
             <h3>
               Your request
               <span>is in!</span>
             </h3>
+
 
             <p class="success-message">
               Thank you for trusting Jola Gifting with your
@@ -817,6 +1335,7 @@
                 Book Your Consultation
                 <span>→</span>
               </a>
+
 
               <a
                 href="#"
@@ -840,23 +1359,30 @@
     </section>
 
 
-    <!-- ================= FINAL CTA ================= -->
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
     <section class="final-cta">
 
       <div class="container">
 
         <div class="final-cta-inner">
 
-          <span class="final-star">✦</span>
+          <span class="final-star">
+            ✦
+          </span>
+
 
           <h2>
             Some moments deserve
             <em>something special.</em>
           </h2>
 
+
           <p>
             Let's create a gift they'll remember.
           </p>
+
 
           <a
             href="#consultation"
@@ -875,14 +1401,19 @@
   </main>
 
 
-  <!-- ================= FOOTER ================= -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
   <footer class="site-footer">
 
     <div class="container footer-top">
 
       <div class="footer-brand">
 
-        <a href="#" class="brand">
+        <a
+          href="index.html"
+          class="brand"
+        >
 
           <img
             src="./assets/logo.jpg"
@@ -890,12 +1421,17 @@
             class="brand-logo"
           />
 
+
           <div>
-            <strong>JOLA GIFTING</strong>
+
+            <strong>
+              JOLA GIFTING
+            </strong>
 
             <p>
               Thoughtfully. Personally. Beautifully.
             </p>
+
           </div>
 
         </a>
@@ -905,13 +1441,20 @@
 
       <div class="footer-links">
 
-        <a href="#about">
+        <a href="about.html">
           About
         </a>
 
-        <a href="#consultation">
+
+        <a href="index.html#consultation">
           Consultation
         </a>
+
+
+        <a href="contact.html">
+          Contact
+        </a>
+
 
         <a
           href="https://www.instagram.com/jolagifting/"
@@ -921,6 +1464,7 @@
           Instagram
         </a>
 
+
         <a
           href="https://web.facebook.com/Jolagifting/"
           target="_blank"
@@ -928,6 +1472,7 @@
         >
           Facebook
         </a>
+
 
         <a
           href="https://www.tiktok.com/@jolagifting"
@@ -956,6 +1501,7 @@
       <span>
         © 2026 Jola Gifting. All rights reserved.
       </span>
+
 
       <span>
         Made with intention.
