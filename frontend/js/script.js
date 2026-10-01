@@ -22,6 +22,71 @@ const WHATSAPP_NUMBER =
   "2349039476798";
 
 
+  /* =========================================================
+   HOME NAVIGATION
+   ALWAYS RETURN TO THE TOP OF THE HOME PAGE
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const homeLinks = document.querySelectorAll(
+    '.site-nav a[href="index.html"], .site-nav a[href="./index.html"]'
+  );
+
+  homeLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const currentPath = window.location.pathname;
+      const isHomePage =
+        currentPath.endsWith("/index.html") ||
+        currentPath === "/" ||
+        currentPath === "";
+
+      if (isHomePage) {
+        event.preventDefault();
+
+        // Remove any existing #consultation hash
+        window.history.replaceState(
+          null,
+          "",
+          window.location.pathname
+        );
+
+        // Smoothly move all the way back to the landing section
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
+
+
+/* =========================================================
+   HOME PAGE — ALWAYS START AT THE TOP
+========================================================= */
+
+if (
+  window.location.pathname.endsWith("index.html") ||
+  window.location.pathname === "/" ||
+  window.location.pathname === ""
+) {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  window.addEventListener("load", () => {
+    // Remove #consultation if it was left in the URL
+    if (window.location.hash === "#consultation") {
+      history.replaceState(
+        null,
+        "",
+        window.location.pathname
+      );
+    }
+
+    window.scrollTo(0, 0);
+  });
+}
 /* =========================================================
    DOM HELPERS
 ========================================================= */

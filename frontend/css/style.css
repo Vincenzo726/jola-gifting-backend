@@ -91,7 +91,42 @@ video {
   color: var(--royal-blue);
 }
 
+/* =========================================================
+   HOME HERO — MAIN HEADING
+========================================================= */
 
+.hero .hero-copy h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(58px, 7vw, 96px);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  color: var(--royal-blue);
+}
+
+.hero .hero-copy h1 span {
+  display: block;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--royal-blue);
+}
+
+@media (max-width: 700px) {
+  .hero .hero-copy h1 {
+    font-size: 51px;
+    line-height: 0.98;
+    letter-spacing: -1px;
+  }
+}
+
+/* =========================================================
+   SMOOTH PAGE SCROLL
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
 /* =========================================================
    GLOBAL
 ========================================================= */
