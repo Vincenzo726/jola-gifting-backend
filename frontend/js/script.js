@@ -1121,11 +1121,19 @@ function initConsultation() {
           error
         );
 
-
-        alert(
-          error.message ||
-          "We couldn't submit your request right now."
-        );
+           if (
+            error insteadof TypeError && 
+            error.message.toLowerCase().includes("fetch")
+           ) {
+            alert(
+              "connection problem. Please check your internet connection and try again"
+            )
+           } else{
+            alert(
+            "we couldn't submit your request right now. Please try again "
+            );
+           }
+        
 
 
         submitButton.disabled =
