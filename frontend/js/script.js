@@ -16,7 +16,7 @@ const CONTACT_API_URL =
   "https://api.jolagifting.com/api/contact";
 
 const CALENDLY_URL =
-  "https://calendly.com/jolagifting-jolagifting/30min";
+  "https://calendly.com/jolagifting-jolagifting/15min";
 
 const WHATSAPP_NUMBER =
   "2349039476798";
