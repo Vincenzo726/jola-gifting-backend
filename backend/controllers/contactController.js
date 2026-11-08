@@ -99,7 +99,7 @@ const createContact = async (req, res) => {
 
       body: JSON.stringify({
         from: {
-          address: "jolagifting@jolagifting.com",
+          address: "jolaagifiting@gmail.com",
           name: "Jola Gifting",
         },
 
