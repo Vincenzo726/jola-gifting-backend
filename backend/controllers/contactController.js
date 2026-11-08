@@ -38,7 +38,7 @@ const createContact = async (req, res) => {
 
     const destination =
       process.env.CONTACT_TO_EMAIL ||
-      "jolagifting@jolagifting.com";
+      "jolaagifiting@gmail.com";
 
     const apiKey =
       process.env.ZEPTO_API_KEY;
